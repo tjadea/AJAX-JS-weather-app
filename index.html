@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Weather app using OpenWeatherMap API</title>
+    <!-- jQuery HTTPS 3.3.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootswatch Lumen CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">OWM Api</a>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="jumbotron">
+        <h1>Current Weather Information</h1>
+        <p class="lead">Enter your current location...</p>
+        <input type="text" id="lookupLocation" class="form-control" placeholder="Enter location name...">
+        <span id="error"></span><br>
+        <button id="searchWeather" class="btn btn-primary">Search</button>
+        <button id="searchForecast" class="btn btn-secondary">5 Day Forecast</button>        
+      </div>
+
+      <div id="weather"></div>
+
+    </main><!-- /.container -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
