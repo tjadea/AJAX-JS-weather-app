@@ -23,12 +23,13 @@
     <main role="main" class="container">
 
       <div class="jumbotron">
-        <h1>Current Weather Information</h1>
-        <p class="lead">Enter your current location...</p>
-        <input type="text" id="lookupLocation" class="form-control" placeholder="Enter location name...">
+        <h1>Weather Information</h1>
+        <p class="lead">Using data from the OpenWeatherMap API and AJAX to display current and future weather predictions.</p>
+        <input type="text" id="lookupLocation" class="form-control" placeholder="Enter location name">
         <span id="error"></span><br>
         <button id="searchWeather" class="btn btn-primary">Search</button>
-        <button id="searchForecast" class="btn btn-secondary">5 Day Forecast</button>        
+        <button id="currentLocation" class="btn btn-warning">Detect Current Location</button>         
+        <button id="searchForecast" class="btn btn-secondary">5 Day Forecast</button>
       </div>
 
       <div id="weather"></div>
