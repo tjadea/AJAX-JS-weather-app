@@ -7,6 +7,7 @@ $(document).ready(function(){
             $.ajax({
                 // Added cors to fix ''testing'' mixed content error
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
                 dataType: 'jsonp',
                 data: {
@@ -51,6 +52,7 @@ $(document).ready(function(){
             $.ajax({
                 // Added cors to fix ''testing'' mixed content error
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
+                headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
                 dataType: 'jsonp',
                 data: {
@@ -117,6 +119,7 @@ $(document).ready(function(){
                 $.ajax({
                     // Added cors to fix ''testing'' mixed content error
                     url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                    headers: { 'Access-Control-Allow-Origin': '*' },
                     type: 'GET',
                     dataType: 'jsonp',
                     data: {
