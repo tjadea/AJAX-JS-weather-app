@@ -9,6 +9,10 @@ $(document).ready(function(){
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                 headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
                 data: {
                     APPID: 'c83ca90630f86042a3cb11f3037af7e2'
                 },
@@ -52,6 +56,10 @@ $(document).ready(function(){
                 // Added cors to fix ''testing'' mixed content error
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
                 headers: { 'Access-Control-Allow-Origin': '*' },
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
                 type: 'GET',
                 data: {
                     APPID: 'c83ca90630f86042a3cb11f3037af7e2',
@@ -119,6 +127,10 @@ $(document).ready(function(){
                     url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                     headers: { 'Access-Control-Allow-Origin': '*' },
                     type: 'GET',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
                     data: {
                         APPID: 'c83ca90630f86042a3cb11f3037af7e2'
                     },
