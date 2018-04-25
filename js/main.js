@@ -5,8 +5,8 @@ $(document).ready(function(){
         if(city != '') {
             // Ajax request
             $.ajax({
-                // Added crossorigin to fix ''testing'' mixed content error
-                url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                // Added cors to fix ''testing'' mixed content error
+                url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                 type: 'GET',
                 dataType: 'JSON',
                 data: {
@@ -49,8 +49,8 @@ $(document).ready(function(){
         if(city != '') {
             // Ajax request
             $.ajax({
-                // Added crossorigin to fix ''testing'' mixed content error
-                url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
+                // Added cors to fix ''testing'' mixed content error
+                url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
                 type: 'GET',
                 dataType: 'JSON',
                 data: {
@@ -115,8 +115,8 @@ $(document).ready(function(){
                 console.log(city);
                 // Ajax request
                 $.ajax({
-                    // Added crossorigin to fix ''testing'' mixed content error
-                    url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                    // Added cors to fix ''testing'' mixed content error
+                    url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                     type: 'GET',
                     dataType: 'JSON',
                     data: {
