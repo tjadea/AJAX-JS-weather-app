@@ -5,7 +5,8 @@ $(document).ready(function(){
         if(city != '') {
             // Ajax request
             $.ajax({
-                url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                // Added crossorigin to fix ''testing'' mixed content error
+                url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                 type: 'GET',
                 dataType: 'JSON',
                 data: {
@@ -114,7 +115,8 @@ $(document).ready(function(){
                 console.log(city);
                 // Ajax request
                 $.ajax({
-                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
+                    // Added crossorigin to fix ''testing'' mixed content error
+                    url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                     type: 'GET',
                     dataType: 'JSON',
                     data: {
