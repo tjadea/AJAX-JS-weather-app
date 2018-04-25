@@ -65,24 +65,30 @@ $(document).ready(function(){
                             let unixTimestamp = data.list[i].dt;
                             let date = new Date(unixTimestamp*1000);
                             let icon = 'http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png';
-                            $('#weather').append(`
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                            <div class="col-md-4">
-                                                <h3>${data.city.name} <span class="badge badge-secondary"> ${data.list[i].main.temp} &deg; C </span></h3>
-                                                <h6> ${date} </h6>
-                                                <h4> <span class="badge badge-warning">${data.list[i].main.temp_max} &deg; C</span> <span class="badge badge-info">${data.list[i].main.temp_min} &deg; C</span> </h4>
-                                                <img src="${icon}"><br>
-                                                <em> ${data.list[i].weather[0].description} </em>
-                                                <h6>Co-ords: ${data.city.coord.lon} longitude &amp; ${data.city.coord.lat} latitude </h6>
+                
+                            // Need to add a row in every 3 iterations
+                            
+                                    let contents = $(`
+                                        <div class="card col-md-4">
+                                            <div class="card-body">
+                                                    <h3>${data.city.name} <span class="badge badge-secondary"> ${data.list[i].main.temp} &deg; C </span></h3>
+                                                    <h6> ${date} </h6>
+                                                    <h4> <span class="badge badge-warning">${data.list[i].main.temp_max} &deg; C</span> <span class="badge badge-info">${data.list[i].main.temp_min} &deg; C</span> </h4>
+                                                    <img src="${icon}"><br>
+                                                    <em> ${data.list[i].weather[0].description} </em>
+                                                    <h6>Co-ords: ${data.city.coord.lon} longitude &amp; ${data.city.coord.lat} latitude </h6>
                                             </div>
-                                    </div>
-                                </div> 
-                            </div>
-                            `);
-                        });
-                    });
+                                        </div>
+                                    `).appendTo('#weather');
+                            });
+            });
+            // Group div's in three's and add .row div.
+                    var divs = $("div#weather > div");
+                    for(var i = 0; i < divs.length; i+=3) {
+                    divs.slice(i, i+3).wrapAll(`
+                    <div class='row'>
+                    </div>`);
+                }
                 },
                 error: function(data) {
                     // Something happened (like incorrect location)
