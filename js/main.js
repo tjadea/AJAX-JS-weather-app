@@ -10,7 +10,7 @@ $(document).ready(function(){
                 headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
                 xhrFields: {
-                    withCredentials: true
+                    withCredentials: false
                 },
                 crossDomain: true,
                 data: {
@@ -57,7 +57,7 @@ $(document).ready(function(){
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
                 headers: { 'Access-Control-Allow-Origin': '*' },
                 xhrFields: {
-                    withCredentials: true
+                    withCredentials: false
                 },
                 crossDomain: true,
                 type: 'GET',
@@ -128,7 +128,7 @@ $(document).ready(function(){
                     headers: { 'Access-Control-Allow-Origin': '*' },
                     type: 'GET',
                     xhrFields: {
-                        withCredentials: true
+                        withCredentials: false
                     },
                     crossDomain: true,
                     data: {
