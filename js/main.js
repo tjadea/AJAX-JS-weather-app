@@ -48,7 +48,8 @@ $(document).ready(function(){
         if(city != '') {
             // Ajax request
             $.ajax({
-                url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
+                // Added crossorigin to fix ''testing'' mixed content error
+                url: 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
                 type: 'GET',
                 dataType: 'JSON',
                 data: {
