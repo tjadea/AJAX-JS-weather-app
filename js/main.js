@@ -9,7 +9,6 @@ $(document).ready(function(){
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                 headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
-                dataType: 'jsonp',
                 data: {
                     APPID: 'c83ca90630f86042a3cb11f3037af7e2'
                 },
@@ -54,7 +53,6 @@ $(document).ready(function(){
                 url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&cnt=' + results,
                 headers: { 'Access-Control-Allow-Origin': '*' },
                 type: 'GET',
-                dataType: 'jsonp',
                 data: {
                     APPID: 'c83ca90630f86042a3cb11f3037af7e2',
                 },
@@ -121,7 +119,6 @@ $(document).ready(function(){
                     url: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric',
                     headers: { 'Access-Control-Allow-Origin': '*' },
                     type: 'GET',
-                    dataType: 'jsonp',
                     data: {
                         APPID: 'c83ca90630f86042a3cb11f3037af7e2'
                     },
